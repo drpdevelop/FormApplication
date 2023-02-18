@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_marginBottom="20px"
+    android:id="@+id/mainLayout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/nombre"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/nombre"
+            android:layout_weight="2"
+            android:hint="@string/nombre"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/apellido"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:hint="@string/apellido"
+            android:id="@+id/apellido"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="@string/edad"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:hint="@string/edad"
+            android:inputType="number"
+            android:id="@+id/edad"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textSize="20dp"
+        android:text="Ingresar"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="presionaBoton"
+    />
+
+
+
+
+</LinearLayout>
