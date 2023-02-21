@@ -10,18 +10,30 @@
     android:id="@+id/mainLayout"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Calculadora"
+        android:layout_height="100dp"
+        android:textAlignment="center"
+        android:textSize="60dp"
+        android:layout_margin="20dp"
+        >
+
+    </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="20dp"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         >
         <TextView
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:text="@string/nombre"
+            android:inputType="number"
+            android:text="Lado uno"
             android:textSize="20dp"
             android:layout_marginTop="10dp"
             />
@@ -29,9 +41,9 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:id="@+id/nombre"
+            android:id="@+id/lado_uno"
             android:layout_weight="2"
-            android:hint="@string/nombre"
+            android:hint="Lado dos"
             />
     </LinearLayout>
 
@@ -46,21 +58,22 @@
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:text="@string/apellido"
+            android:text="Lado dos"
             android:textSize="20dp"
             />
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:inputType="number"
             android:layout_weight="2"
-            android:hint="@string/apellido"
-            android:id="@+id/apellido"
+            android:hint="Lado dos"
+            android:id="@+id/lado_dos"
             />
     </LinearLayout>
 
 
-    <LinearLayout
+    <!---<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -83,18 +96,55 @@
             android:inputType="number"
             android:id="@+id/edad"
             />
-    </LinearLayout>
+    </LinearLayout>-->
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:textSize="20dp"
-        android:text="Ingresar"
-        android:layout_marginTop="60dp"
+        android:text="Calcular"
+        android:id="@+id/calcular"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:onClick="presionaBoton"
+        android:layout_marginBottom="30dp"
     />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:background="#D2D2D2">
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:text="Resultado:"
+            android:textSize="30dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textSize="30dp"
+            android:layout_weight="2"
+            android:hint="0"
+            android:id="@+id/result"
+            />
+    </LinearLayout>
 
 
 
