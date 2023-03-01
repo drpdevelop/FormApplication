@@ -2,6 +2,7 @@ package com.clase1.formapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         lado_uno = findViewById(R.id.lado_uno);
         lado_dos = findViewById(R.id.lado_dos);
-        result = findViewById(R.id.result);
+        //result = findViewById(R.id.result);
         calculate = findViewById(R.id.calcular);
 
     }
@@ -45,11 +46,12 @@ public class MainActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                float lado1 = Float.parseFloat(lado_uno.getText().toString());
-                float lado2 = Float.parseFloat(lado_dos.getText().toString());
-                float resultado = lado1*lado2;
-                String resultad = String.valueOf(resultado);
-                result.setText(resultad);
+                //float lado1 = Float.parseFloat(lado_uno.getText().toString());
+                //float lado2 = Float.parseFloat(lado_dos.getText().toString());
+                //float resultado = lado1*lado2;
+                gotoActivity(view);
+                /*String resultad = String.valueOf(resultado);
+                result.setText(resultad);*/
 
             }
         });
@@ -83,6 +85,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i(Debug,"Entre A OnDestroy");
+    }
+
+    public void gotoActivity (View view) {
+
+        Intent pasarDato = new Intent(this, MainActivity2.class);
+        pasarDato.putExtra("lado1",lado_uno.getText().toString());
+        pasarDato.putExtra("lado2",lado_dos.getText().toString());
+        //22pasarDato.putExtra("result",result.getText().toString());
+        startActivity(pasarDato);
+
     }
 
     /*public void calcular(View view) {
