@@ -10,16 +10,6 @@
     android:id="@+id/mainLayout"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:text="Resultado"
-        android:layout_height="100dp"
-        android:textAlignment="center"
-        android:textSize="60dp"
-        android:layout_margin="20dp"
-        >
-
-    </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,7 +34,7 @@
             android:id="@+id/lado_uno"
             android:layout_weight="2"
             android:inputType="number"
-            android:hint="Lado dos"
+            android:hint="Ingrese lado uno"
             />
     </LinearLayout>
 
@@ -68,7 +58,7 @@
             android:layout_height="40dp"
             android:inputType="number"
             android:layout_weight="2"
-            android:hint="Lado dos"
+            android:hint="Ingrese lado dos20"
             android:id="@+id/lado_dos"
             />
     </LinearLayout>

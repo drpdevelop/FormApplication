@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         Intent pasarDato = new Intent(this, MainActivity2.class);
         pasarDato.putExtra("lado1",lado_uno.getText().toString());
         pasarDato.putExtra("lado2",lado_dos.getText().toString());
-        //22pasarDato.putExtra("result",result.getText().toString());
+        //pasarDato.putExtra("result",result.getText().toString());
         startActivity(pasarDato);
 
     }
